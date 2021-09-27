@@ -1,7 +1,7 @@
 'use strict';
 
 let secretNumber = Math.floor(Math.random() * 100) + 1;
-//revealGuess(secretNumber); //for testing purposes
+// revealGuess(secretNumber); //for testing purposes
 let score = 20;
 let highscore = 0;
 
@@ -62,8 +62,8 @@ const gameLogic = function () {
     if (score > 1) {
       score--;
       updateScore(score);
-      if (guess - secretNumber >= 5) displayMessage('🤏 Little bit High');
-      else if (secretNumber - guess <= 5) displayMessage('🤏 Little bit Low');
+      if (guess - secretNumber <= 5 && guess - secretNumber >= 0 ) displayMessage('🤏 Little bit High');
+      else if (secretNumber - guess <= 5 && secretNumber - guess >=0) displayMessage('🤏 Little bit Low');
       else {
         displayMessage(guess > secretNumber ? '📈 Too High' : '📉 Too Low');
       }
