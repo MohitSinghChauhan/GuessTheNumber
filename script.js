@@ -1,7 +1,7 @@
 'use strict';
 
 let secretNumber = Math.floor(Math.random() * 100) + 1;
-revealGuess(secretNumber); //for testing purposes
+//revealGuess(secretNumber); //for testing purposes
 let score = 20;
 let highscore = 0;
 
